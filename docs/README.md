@@ -2,43 +2,21 @@
 Matrix Factorization with gradient descent (template)
 
 ### Development Setup
-1. Install pyenv
+1. Install Anaconda [\[Windows\]](https://docs.anaconda.com/anaconda/install/windows/) [\[macOS\]](https://docs.anaconda.com/anaconda/install/mac-os/)
+
+2. Create an environment
     ```
-    $ brew install pyenv
+    $ conda create --name matrix_factorization
     ```
 
-2. Install python version 3.7.4
+3. Install dependencies
     ```
-    $ pyenv install 3.7.4
-    ```
-
-3. Initialize pyenv
-    ```
-    $ pyenv init
+    $ conda install --file requirements.txt
     ```
 
-4. Make sure you are using the right python version (3.7.4). You may want to add the following to your bash settings:
+4. Run the code
     ```
-    # Loads pyenv automatically
-    eval "$(pyenv init -)"
-
-    # Prevents creation of pycache files
-    export PYTHONDONTWRITEBYTECODE=true
-    ```
-
-5. Upgrade pip
-    ```
-    $ pip install --upgrade pip
-    ```
-
-6. Install dependencies
-    ```
-    $ pip install -r requirements.txt
-    ```
-
-7. Run the code
-    ```
-    $ python app.py
+    $ python train.py
     ```
 
 ### Sample Output

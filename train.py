@@ -15,18 +15,17 @@ Arguments
 """
 
 R = np.array([
-    [5, 3, 0, 1],
-    [4, 0, 0, 1],
-    [1, 1, 0, 5],
-    [1, 0, 0, 4],
-    [0, 1, 5, 4],
+    [0, 0, 1, 3, 2],
+    [4, 0, 1, 5, 3],
+    [3, 0, 1, 0, 0],
+    [0, 2, 0, 2, 0],
 ])
 
 print("\n------------------- INPUT --------------------")
 print(R)
 
 
-mf = MF(R, K=2, alpha=0.05, beta=0.01, target_accuracy=0.99, max_iterations=1000, tol=0.0001, logger=Logger())
+mf = MF(R, K=2, alpha=0.01, beta=0.01, target_accuracy=0.999, max_iterations=1000, tol=0.00001, logger=Logger())
 print("\n--------------- HYPERPARAMETERS ----------------")
 mf.log_hyperparameters()
 
@@ -46,7 +45,7 @@ print("\nItem bias:")
 print(mf.b_i)
 print("\nUser bias:")
 print(mf.b_u)
-print("\nItem latent matrix:")
-print(mf.P)
 print("\nUser latent matrix:")
+print(mf.P)
+print("\nItem latent matrix:")
 print(mf.Q)
