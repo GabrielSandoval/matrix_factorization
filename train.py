@@ -11,7 +11,8 @@ Arguments
 - beta (float)    : regularization parameter
 - target_accuracy : training stops when target accuracy is reached
 - max_iterations  : training stops when max iteration is reached
-- tol         : training stops when error difference between two consecutive iteration is less than epsilon
+- tol             : training stops when error difference between two
+                    consecutive iteration is less than epsilon
 """
 
 R = np.array([
@@ -24,8 +25,17 @@ R = np.array([
 print("\n------------------- INPUT --------------------")
 print(R)
 
+mf = MF(
+    R,
+    K=2,
+    alpha=0.0001,
+    beta=0.001,
+    target_accuracy=0.9999,
+    max_iterations=50000,
+    tol=0.000001,
+    logger=Logger()
+)
 
-mf = MF(R, K=2, alpha=0.01, beta=0.01, target_accuracy=0.999, max_iterations=1000, tol=0.00001, logger=Logger())
 print("\n--------------- HYPERPARAMETERS ----------------")
 mf.log_hyperparameters()
 
