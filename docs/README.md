@@ -2,19 +2,30 @@
 Matrix Factorization with gradient descent (template)
 
 ### Development Setup
-1. Install Anaconda [\[Windows\]](https://docs.anaconda.com/anaconda/install/windows/) [\[macOS\]](https://docs.anaconda.com/anaconda/install/mac-os/)
+1. Go to your project directory and download the code
+    ```
+    $ git clone https://github.com/GabrielSandoval/matrix_factorization.git
+    ```
 
-2. Create an environment
+2. Change to that working directory
+
+    ```
+    $ cd matrix_factorization
+    ```
+
+3. Install Anaconda [\[Windows\]](https://docs.anaconda.com/anaconda/install/windows/) [\[macOS\]](https://docs.anaconda.com/anaconda/install/mac-os/)
+
+4. Create an environment
     ```
     $ conda create --name matrix_factorization
     ```
 
-3. Install dependencies
+5. Install dependencies
     ```
     $ conda install --file requirements.txt
     ```
 
-4. Run the code
+6. Run the code
     ```
     $ python train.py
     ```
